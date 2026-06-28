@@ -1,0 +1,5 @@
+# Air temp files
+build/
+
+# Environment variables
+*.env

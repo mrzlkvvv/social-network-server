@@ -1,0 +1,28 @@
+basePath: /
+definitions:
+  cmd.Response:
+    properties:
+      message:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: Hello world на chi+swag
+  title: Social Network Server
+  version: "0.1"
+paths:
+  /:
+    get:
+      description: Просто возвращает Hello, World!
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/cmd.Response'
+      summary: Приветствие
+      tags:
+      - default
+swagger: "2.0"

@@ -1,0 +1,13 @@
+root = "."
+tmp_dir = "build"
+
+[build]
+cmd = "swag init -g cmd/main.go -o ./docs --parseDependency && go build -o ./build/social-network-server ./cmd/main.go"
+entrypoint = "./build/social-network-server"
+delay = 2000
+include_ext = ["go", "sql"]
+exclude_dir = ["docs"]
+exclude_regex = ["_test\\.go"]
+
+[misc]
+clean_on_exit = true
